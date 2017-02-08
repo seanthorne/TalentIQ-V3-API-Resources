@@ -1,16 +1,7 @@
 {
-	"$schema": "http://json-schema.org/draft-04/schema#",
-	"title": "API V3 - Person V6 Schema",
-	"type": "object",
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
     "properties": {
-        "birth_date": {
-            "format": "yyyy||yyyy-MM||yyyy-MM-dd",
-            "type": ["date", "null"]
-        },
-        "death_date": {
-            "format": "yyyy||yyyy-MM||yyyy-MM-dd",
-            "type": ["date", "null"]
-        },
         "education": {
             "items": {
                 "properties": {
@@ -22,58 +13,55 @@
                         "format": "yyyy||yyyy-MM||yyyy-MM-dd",
                         "type": ["date", "null"]
                     },
-			        "locations": {
-			        	"type": "array",
-			        	"items": {
-			        		"additionalProperties": false,
-			        		"type": "object",
-			        		"description": "If location is an unparsed string e.g. 1546 SE 55th Portland OR United States, set as object name",
-				            "properties": {
-				                "continent": {
-				                    "type": ["string", "null"]
-				                },
-				                "country": {
-				                    "type": ["string", "null"]
-				                },
-				                "geo": {
-				                    "type": ["string", "null"],
-				                    "description": "geo_point expressed as string in format: lat,lon"
-				                },
-				                "id": {
-				                    "type": ["string", "null"]
-				                },
+                    "locations": {
+                        "type": "array",
+                        "items": {
+                            "additionalProperties": true,
+                            "type": "object",
+                            "description": "If location is an unparsed string e.g. 1546 SE 55th Portland OR United States, set as object name",
+                            "properties": {
+                                "continent": {
+                                    "type": ["string", "null"]
+                                },
+                                "country": {
+                                    "type": ["string", "null"]
+                                },
+                                "geo": {
+                                    "type": ["string", "null"],
+                                    "description": "geo_point expressed as string in format: lat,lon"
+                                },
                                 "type": {
                                     "type": ["string", "null"]
                                 },
-				                "is_primary": {
-				                    "type": ["null", "boolean"]
-				                },
-				                "locality": {
-				                    "type": ["string", "null"]
-				                },
-				                "name": {
-				                    "type": ["string", "null"]
-				                },
-				                "po_box": {
-				                    "type": ["string", "null"]
-				                },
-				                "postal_code": {
-				                    "type": ["string", "null"]
-				                },
-				                "region": {
-				                    "type": ["string", "null"]
-				                },
-				                "street_address": {
-				                    "type": ["string", "null"]
-				                }
-				            }
-			            }
-			        },
+                                "is_primary": {
+                                    "type": ["null", "boolean"]
+                                },
+                                "locality": {
+                                    "type": ["string", "null"]
+                                },
+                                "name": {
+                                    "type": ["string", "null"]
+                                },
+                                "po_box": {
+                                    "type": ["string", "null"]
+                                },
+                                "postal_code": {
+                                    "type": ["string", "null"]
+                                },
+                                "region": {
+                                    "type": ["string", "null"]
+                                },
+                                "street_address": {
+                                    "type": ["string", "null"]
+                                }
+                            }
+                        }
+                    },
                     "majors": {
                         "type": "array",
-                    	"items": {
-                    		"type": "string"
-                    	}
+                        "items": {
+                            "type": "string"
+                        }
                     },
                     "degrees": {
                         "type": "array",
@@ -83,17 +71,14 @@
                     },
                     "minors": {
                         "type": "array",
-                    	"items": {
-                    		"type": "string"
-                    	}
+                        "items": {
+                            "type": "string"
+                        }
                     },
                     "school": {
-                    	"type": "object",
-                    	"additionalProperties": false,
+                        "type": "object",
+                        "additionalProperties": true,
                         "properties": {
-                            "id": {
-                                "type": ["string", "null"]
-                            },
                             "location": {
                                 "type": ["string", "null"]
                             },
@@ -102,6 +87,12 @@
                             },
                             "website": {
                                 "type": ["string", "null"]
+                            },
+                            "profiles": {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
                             }
                         }
                     },
@@ -116,17 +107,13 @@
         "emails": {
             "type": "array",
             "items": {
-                "additionalProperties": false,
-                "required": ["address", "is_primary", "is_valid", "type"],
+                "additionalProperties": true,
                 "type": "object",
                 "properties": {
                     "address": {
                         "type": "string"
                     },
                     "is_primary": {
-                        "type": ["null", "boolean"]
-                    },
-                    "is_valid": {
                         "type": ["null", "boolean"]
                     },
                     "type": {
@@ -142,19 +129,18 @@
             }
         },
         "industries": {
-        	"type": "array",
-        	"items": {
-        		"additionalProperties": false,
-        		"type": "object",
-        		"required": ["name", "is_primary"],
-	            "properties": {
-	                "is_primary": {
-	                    "type": ["null", "boolean"]
-	                },
-	                "name": {
-	                    "type": "string"
-	                }
-	            }
+            "type": "array",
+            "items": {
+                "additionalProperties": true,
+                "type": "object",
+                "properties": {
+                    "is_primary": {
+                        "type": ["null", "boolean"]
+                    },
+                    "name": {
+                        "type": "string"
+                    }
+                }
             }
         },
         "experience": {
@@ -162,13 +148,9 @@
                 "properties": {
                     "is_current": ["boolean", "null"],
                     "company": {
-                    	"type": "object",
-                    	"additionalProperties": false,
-                    	"required": ["id", "industry", "location", "name", "size", "website"],
+                        "type": "object",
+                        "additionalProperties": true,
                         "properties": {
-                            "id": {
-                                "type": ["string", "null"]
-                            },
                             "industry": {
                                 "type": ["string", "null"]
                             },
@@ -183,6 +165,12 @@
                             },
                             "website": {
                                 "type": ["string", "null"]
+                            },
+                            "profiles": {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
                             }
                         }
                     },
@@ -190,73 +178,68 @@
                         "format": "yyyy||yyyy-MM||yyyy-MM-dd",
                         "type": ["date", "null"]
                     },
-			        "locations": {
-			        	"type": "array",
-			        	"items": {
-			        		"required": ["continent", "country", "geo", "id", "is_primary", "locality", "name", "po_box", "postal_code", "region", "street_address"],
-			        		"additionalProperties": false,
-			        		"type": "object",
-			        		"description": "If location is an unparsed string e.g. 1546 SE 55th Portland OR United States, set as object name",
-				            "properties": {
-				                "continent": {
-				                    "type": ["string", "null"]
-				                },
-				                "country": {
-				                    "type": ["string", "null"]
-				                },
-				                "geo": {
-				                    "type": ["string", "null"],
-				                    "description": "geo_point expressed as string in format: lat,lon"
-				                },
-				                "id": {
-				                    "type": ["string", "null"]
-				                },
+                    "locations": {
+                        "type": "array",
+                        "items": {
+                            "additionalProperties": true,
+                            "type": "object",
+                            "description": "If location is an unparsed string e.g. 1546 SE 55th Portland OR United States, set as object name",
+                            "properties": {
+                                "continent": {
+                                    "type": ["string", "null"]
+                                },
+                                "country": {
+                                    "type": ["string", "null"]
+                                },
+                                "geo": {
+                                    "type": ["string", "null"],
+                                    "description": "geo_point expressed as string in format: lat,lon"
+                                },
                                 "type": {
                                     "type": ["string", "null"]
                                 },
-				                "is_primary": {
-				                    "type": ["null", "boolean"]
-				                },
-				                "locality": {
-				                    "type": ["string", "null"]
-				                },
-				                "name": {
-				                    "type": ["string", "null"]
-				                },
-				                "po_box": {
-				                    "type": ["string", "null"]
-				                },
-				                "postal_code": {
-				                    "type": ["string", "null"]
-				                },
-				                "region": {
-				                    "type": ["string", "null"]
-				                },
-				                "street_address": {
-				                    "type": ["string", "null"]
-				                }
-				            }
-			            }
-			        },
+                                "is_primary": {
+                                    "type": ["null", "boolean"]
+                                },
+                                "locality": {
+                                    "type": ["string", "null"]
+                                },
+                                "name": {
+                                    "type": ["string", "null"]
+                                },
+                                "po_box": {
+                                    "type": ["string", "null"]
+                                },
+                                "postal_code": {
+                                    "type": ["string", "null"]
+                                },
+                                "region": {
+                                    "type": ["string", "null"]
+                                },
+                                "street_address": {
+                                    "type": ["string", "null"]
+                                }
+                            }
+                        }
+                    },
                     "start_date": {
                         "format": "yyyy||yyyy-MM||yyyy-MM-dd",
                         "type": ["date", "null"]
                     },
                     "title": {
-                    	"type": "object",
-                    	"required": ["functions", "levels", "name"],
-                    	"additionalProperties": false,
+                        "type": "object",
+                        "additionalProperties": true,
                         "properties": {
                             "functions": {
-                            	"type": "array",
-                            	"items": {
-                                	"type": ["string", "null"]
+                                "type": "array",
+                                "items": {
+                                    "type": ["string", "null"]
                                 }
                             },
                             "levels": {
-                            	"type": "array",
-                            	"items": {
-                                	"type": ["string", "null"]
+                                "type": "array",
+                                "items": {
+                                    "type": ["string", "null"]
                                 }
                             },
                             "name": {
@@ -268,89 +251,66 @@
             },
             "type": "array"
         },
-        "gender": {
-            "type": ["string", "null"]
-        },
         "interests": {
             "items": {
-            	"additionalProperties": false,
-            	"required": ["name"],
-            	"type": "object",
+                "additionalProperties": true,
+                "type": "object",
                 "properties": {
                     "name": {
-                        "type": ["string", "null"]
+                        "type": "string"
                     }
                 }
             },
             "type": "array"
         },
-        "ips": {
-        	"type": "array",
-        	"items": {
-        		"additionalProperties": false,
-        		"required": ["ip"],
-        		"type": "object",
-	            "properties": {
-	                "ip": {
-	                    "type": "string",
-	                    "format": "ipv4"
-	                }
-	            }
-            }
-        },
         "locations": {
-        	"type": "array",
-        	"items": {
-        		"required": ["continent", "country", "geo", "id", "is_primary", "locality", "name", "po_box", "postal_code", "region", "street_address"],
-        		"additionalProperties": false,
-        		"type": "object",
-        		"description": "If location is an unparsed string e.g. 1546 SE 55th Portland OR United States, set as object name",
-	            "properties": {
-	                "continent": {
-	                    "type": ["string", "null"]
-	                },
-	                "country": {
-	                    "type": ["string", "null"]
-	                },
-	                "geo": {
-	                    "type": ["string", "null"],
-	                    "description": "geo_point expressed as string in format: lat,lon"
-	                },
-	                "id": {
-	                    "type": ["string", "null"]
-	                },
+            "type": "array",
+            "items": {
+                "additionalProperties": true,
+                "type": "object",
+                "description": "If location is an unparsed string e.g. 1546 SE 55th Portland OR United States, set as object name",
+                "properties": {
+                    "continent": {
+                        "type": ["string", "null"]
+                    },
+                    "country": {
+                        "type": ["string", "null"]
+                    },
+                    "geo": {
+                        "type": ["string", "null"],
+                        "description": "geo_point expressed as string in format: lat,lon"
+                    },
                     "type": {
                         "type": ["string", "null"]
                     },
-	                "is_primary": {
-	                    "type": ["null", "boolean"]
-	                },
-	                "locality": {
-	                    "type": ["string", "null"]
-	                },
-	                "name": {
-	                    "type": ["string", "null"]
-	                },
-	                "po_box": {
-	                    "type": ["string", "null"]
-	                },
-	                "postal_code": {
-	                    "type": ["string", "null"]
-	                },
-	                "region": {
-	                    "type": ["string", "null"]
-	                },
-	                "street_address": {
-	                    "type": ["string", "null"]
-	                }
-	            }
+                    "is_primary": {
+                        "type": ["null", "boolean"]
+                    },
+                    "locality": {
+                        "type": ["string", "null"]
+                    },
+                    "name": {
+                        "type": ["string", "null"]
+                    },
+                    "po_box": {
+                        "type": ["string", "null"]
+                    },
+                    "postal_code": {
+                        "type": ["string", "null"]
+                    },
+                    "region": {
+                        "type": ["string", "null"]
+                    },
+                    "street_address": {
+                        "type": ["string", "null"]
+                    }
+                }
             }
         },
         "names": {
             "items": {
-            	"additionalProperties": false,
-            	"type": "object",
-            	"required": ["clean", "first_name", "is_primary", "last_name", "middle_name", "name", "pedigree", "suffix", "title"],
+                "additionalProperties": true,
+                "type": "object",
                 "properties": {
                     "clean": {
                         "type": ["string", "null"]
@@ -362,6 +322,15 @@
                         "type": ["boolean", "null"]
                     },
                     "last_name": {
+                        "type": ["string", "null"]
+                    },
+                    "first_initial": {
+                        "type": ["string", "null"]
+                    },
+                    "middle_initial": {
+                        "type": ["string", "null"]
+                    },
+                    "last_initial": {
                         "type": ["string", "null"]
                     },
                     "middle_name": {
@@ -383,78 +352,44 @@
             },
             "type": "array"
         },
-        "relevance": {
-            "type": "long"
-        },
-        "fuzzy_schools": {
-            "type": "array",
-            "items": {
-                "type": "string"
-            }
-        },
-        "schools": {
-            "type": "array",
-            "items": {
-                "type": "string"
-            }
-        },
-        "fuzzy_companies": {
-            "type": "array",
-            "items": {
-                "type": "string"
-            }
-        },
-        "companies": {
-            "type": "array",
-            "items": {
-                "type": "string"
-            }
-        },
         "phone_numbers": {
-        	"type": "array",
-        	"items": {
-        		"additionalProperties": false,
-        		"required": ["number", "E164", "area_code", "carrier", "country_code", "extension", "is_primary", "is_valid", "national_number", "number", "type"],
-        		"type": "object",
-	            "properties": {
-	                "E164": {
-	                    "type": ["string", "null"]
-	                },
-	                "area_code": {
-	                    "type": ["string", "null"]
-	                },
-	                "carrier": {
-	                    "type": ["string", "null"]
-	                },
-	                "country_code": {
-	                    "type": ["string", "null"]
-	                },
-	                "extension": {
-	                    "type": ["string", "null"]
-	                },
-	                "is_primary": {
-	                    "type": ["null", "boolean"]
-	                },
-	                "is_valid": {
-	                    "type": ["null", "boolean"]
-	                },
-	                "national_number": {
-	                    "type": ["string", "null"]
-	                },
-	                "number": {
-	                    "type": "string"
-	                },
-	                "type": {
-	                    "type": ["string", "null"]
-	                }
-	            }
+            "type": "array",
+            "items": {
+                "additionalProperties": true,
+                "type": "object",
+                "properties": {
+                    "E164": {
+                        "type": ["string", "null"]
+                    },
+                    "area_code": {
+                        "type": ["string", "null"]
+                    },
+                    "country_code": {
+                        "type": ["string", "null"]
+                    },
+                    "extension": {
+                        "type": ["string", "null"]
+                    },
+                    "is_primary": {
+                        "type": ["null", "boolean"]
+                    },
+                    "national_number": {
+                        "type": ["string", "null"]
+                    },
+                    "number": {
+                        "type": "string"
+                    },
+                    "type": {
+                        "type": ["string", "null"]
+                    }
+                }
             }
         },
         "photos": {
             "items": {
-            	"additionalProperties": false,
-            	"required": ["source", "url"],
-            	"type": "object",
+                "additionalProperties": true,
+                "required": ["source", "url"],
+                "type": "object",
                 "properties": {
                     "source": {
                         "type": ["string", "null"]
@@ -467,47 +402,45 @@
             "type": "array"
         },
         "profiles": {
-        	"type": "array",
-        	"items": {
-        		"additionalProperties": false,
-        		"type": "object",
-        		"required": ["aliases", "ids", "is_active", "network", "url", "username"],
-	            "properties": {
-	                "aliases": {
-	                	"type": "array",
-	                	"items": {
-	                		"type": "string"
-	                	}
-	                },
-	                "ids": {
-	                	"type": "array",
-	                	"items": {
-	                		"type": "string"
-	                	}
-	                },
+            "type": "array",
+            "items": {
+                "additionalProperties": true,
+                "type": "object",
+                "properties": {
+                    "aliases": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "ids": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
                     "clean": {
                         "type": ["string", "null"]
                     },
-	                "is_active": {
-	                    "type": ["null", "boolean"]
-	                },
-	                "network": {
-	                    "type": ["string", "null"]
-	                },
-	                "url": {
-	                    "type": ["string", "null"]
-	                },
-	                "username": {
-	                    "type": ["string", "null"]
-	                }
-	            }
-        	}
+                    "is_active": {
+                        "type": ["null", "boolean"]
+                    },
+                    "network": {
+                        "type": ["string", "null"]
+                    },
+                    "url": {
+                        "type": ["string", "null"]
+                    },
+                    "username": {
+                        "type": ["string", "null"]
+                    }
+                }
+            }
         },
         "skills": {
             "items": {
-            	"additionalProperties": false,
-            	"required": ["name"],
-            	"type": "object",
+                "additionalProperties": true,
+                "type": "object",
                 "properties": {
                     "name": {
                         "type": "string"
@@ -516,30 +449,10 @@
             },
             "type": "array"
         },
-        "name_formats": {
-            "items": {
-                "type": "string"
-            },
-            "type": "array"
-        },
-        "summaries": {
-            "type": "array",
-            "items": {
-                "additionalProperties": true,
-                "required": ["text"],
-                "type": "object",
-                "properties": {
-                    "text": {
-                        "type": "string"
-                    }
-                }
-            }
-        },
         "websites": {
             "items": {
-            	"additionalProperties": false,
-            	"required": ["is_primary", "type", "url"],
-            	"type": "object",
+                "additionalProperties": true,
+                "type": "object",
                 "properties": {
                     "is_primary": {
                         "type": ["boolean", "null"]
