@@ -1,0 +1,10 @@
+{
+	"status": 400,
+	"errors": [
+		{
+			"message": "`size` param cannot be greater than 100"
+		}
+	],
+	"message": "Bad Request",
+	"hits": []
+}
