@@ -30,9 +30,21 @@
         {
             "continent": "north america", 
             "country": "united states", 
-            "geo": "45.5236111,-122.675", 
-            "id": "avihn4_jrcip00igmbli", 
+            "geo": "37.79,-122.39", 
             "is_primary": true, 
+            "locality": "san francisco", 
+            "name": "san francisco, california, united states", 
+            "po_box": null, 
+            "postal_code": null, 
+            "region": "california", 
+            "street_address": null, 
+            "type": "locality"
+        }, 
+        {
+            "continent": "north america", 
+            "country": "united states", 
+            "geo": "45.5236111,-122.675", 
+            "is_primary": null, 
             "locality": "portland", 
             "name": "portland, oregon, united states", 
             "po_box": "1", 

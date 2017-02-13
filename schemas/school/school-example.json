@@ -1,0 +1,84 @@
+{
+    "date_closed": null, 
+    "date_founded": "1876", 
+    "emails": [
+        {
+            "address": "admissions@uoregon.edu", 
+            "domain": "uoregon.edu", 
+            "is_primary": null, 
+            "is_valid": null, 
+            "local": "admissions", 
+            "type": "professional"
+        }
+    ], 
+    "is_active": true, 
+    "locations": [
+        {
+            "continent": "north america", 
+            "country": "united states", 
+            "geo": "44.044973, -123.071661", 
+            "is_primary": true, 
+            "locality": "eugene", 
+            "name": "eugene, oregon, united states", 
+            "po_box": "1", 
+            "postal_code": "97403", 
+            "region": "oregon", 
+            "street_address": "1585 e 13th ave", 
+            "type": "locality"
+        }
+    ], 
+    "names": [
+        {
+            "clean": "universityoregon", 
+            "is_primary": true, 
+            "name": "university of oregon"
+        }, 
+        {
+            "clean": "universityoregonlundquistschoolbusiness", 
+            "is_primary": false, 
+            "name": "university of oregon - lundquist school of business"
+        }
+    ], 
+    "phone_numbers": [
+        {
+            "E164": "+5413461000", 
+            "area_code": "541", 
+            "country_code": "1", 
+            "extension": null, 
+            "is_active": null, 
+            "is_valid": null, 
+            "national_number": "5413461000", 
+            "number": "(541) 346-1000"
+        }
+    ], 
+    "profiles": [
+        {
+            "aliases": [], 
+            "clean": "linkedin.com/edu/university-of-oregon-19207", 
+            "ids": [], 
+            "network": "linkedin", 
+            "url": "http://www.linkedin.com/edu/university-of-oregon-19207", 
+            "username": "edu/university-of-oregon-19207"
+        }
+    ], 
+    "websites": [
+        {
+            "domain": "uoregon.edu", 
+            "is_primary": true, 
+            "url": "http://www.uoregon.edu",
+            "type": null
+        }, 
+        {
+            "domain": "uoregon.edu", 
+            "is_primary": false, 
+            "url": "http://lundquist.uoregon.edu",
+            "type": null
+        }, 
+        {
+            "domain": "uoregon.edu", 
+            "is_primary": false, 
+            "url": "http://law.uoregon.edu",
+            "type": null
+        }
+    ]
+}
