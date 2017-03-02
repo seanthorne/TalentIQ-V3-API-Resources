@@ -1,0 +1,186 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+   "properties": {
+        "date_closed": {
+            "type": ["null", "string"]
+        }, 
+        "date_founded": {
+            "type": ["null", "string"]
+        }, 
+        "emails": {
+        	"type": "array",
+        	"items": {
+        		"type": "object",
+	            "properties": {
+	                "address": {
+	                    "type": "string"
+	                }, 
+	                "is_primary": {
+	                    "type": ["null", "boolean"]
+	                }, 
+	                "is_valid": {
+	                    "type": ["null", "boolean"]
+	                }, 
+	                "type": {
+	                    "type": ["string", "null"]
+	                },
+	                "domain": {
+	                    "type": ["string", "null"]
+	                },
+	                "local": {
+	                    "type": ["string", "null"]
+	                }
+	            }
+            }
+        }, 
+        "is_active": {
+            "type": ["null", "boolean"]
+        }, 
+        "locations": {
+        	"type": "array",
+        	"items": {
+        		"type": "object",
+	            "properties": {
+	                "continent": {
+	                    "type": ["string", "null"]
+	                }, 
+	                "country": {
+	                    "type": ["string", "null"]
+	                }, 
+	                "geo": {
+	                    "type": ["string", "null"]
+	                }, 
+	                "type": {
+	                    "type": ["string", "null"]
+	                }, 
+	                "is_primary": {
+	                    "type": ["null", "boolean"]
+	                }, 
+	                "locality": {
+	                    "type": ["string", "null"]
+	                }, 
+	                "name": {
+	                    "type": ["string", "null"]
+	                }, 
+	                "po_box": {
+	                    "type": ["string", "null"]
+	                }, 
+	                "postal_code": {
+	                    "type": ["string", "null"]
+	                }, 
+	                "region": {
+	                    "type": ["string", "null"]
+	                }, 
+	                "street_address": {
+	                    "type": ["string", "null"]
+	                }
+	            }
+            }
+        }, 
+        "names": {
+        	"type": "array",
+        	"items": {
+        		"type": "object",
+	            "properties": {
+	                "clean": {
+	                    "type": ["string", "null"]
+	                }, 
+	                "is_primary": {
+	                    "type": ["null", "boolean"]
+	                }, 
+	                "name": {
+	                    "type": "string"
+	                }
+	            }
+            }
+        }, 
+        "phone_numbers": {
+        	"type": "array",
+        	"items": {
+        		"type": "object",
+	            "properties": {
+	                "E164": {
+	                    "type": ["string", "null"]
+	                }, 
+	                "area_code": {
+	                    "type": ["string", "null"]
+	                },
+	                "country_code": {
+	                    "type": ["string", "null"]
+	                }, 
+	                "extension": {
+	                    "type": ["string", "null"]
+	                }, 
+	                "is_primary": {
+	                    "type": ["null", "boolean"]
+	                }, 
+	                "is_valid": {
+	                    "type": ["null", "boolean"]
+	                }, 
+	                "national_number": {
+	                    "type": ["string", "null"]
+	                }, 
+	                "number": {
+	                    "type": "string"
+	                }, 
+	                "type": {
+	                    "type": ["string", "null"]
+	                }
+	            }
+            }
+        }, 
+        "profiles": {
+        	"type": "array",
+        	"items": {
+        		"type": "object",
+	            "properties": {
+	                "aliases": {
+	                	"type": "array",
+	                	"items": {
+	                		"type": "string"
+	                	}
+	                }, 
+	                "ids": {
+	                	"type": "array",
+	                	"items": {
+	                		"type": "string"
+	                	}
+	                }, 
+	                "clean": {
+	                	"type": ["null", "string"]
+                	},
+	                "network": {
+	                    "type": ["string", "null"]
+	                }, 
+	                "url": {
+	                    "type": ["string", "null"]
+	                }, 
+	                "username": {
+	                    "type": ["string", "null"]
+	                }
+	            }
+        	}
+        },
+        "websites": {
+        	"type": "array",
+        	"items": {
+        		"type": "object",
+	            "properties": {
+	                "domain": {
+	                    "type": ["string", "null"]
+	                }, 
+	                "type": {
+	                    "type": ["string", "null"]
+	                }, 
+	                "is_primary": {
+	                    "type": ["null", "boolean"]
+	                }, 
+	                "url": {
+	                    "type": "string"
+	                }
+	            }
+            }
+        }
+    }
+}

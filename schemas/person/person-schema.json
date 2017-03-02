@@ -10,15 +10,12 @@
                         "type": ["string", "null"]
                     },
                     "end_date": {
-                        "format": "yyyy||yyyy-MM||yyyy-MM-dd",
-                        "type": ["date", "null"]
+                        "type": ["string", "null"]
                     },
                     "locations": {
                         "type": "array",
                         "items": {
-                            "additionalProperties": true,
                             "type": "object",
-                            "description": "If location is an unparsed string e.g. 1546 SE 55th Portland OR United States, set as object name",
                             "properties": {
                                 "continent": {
                                     "type": ["string", "null"]
@@ -27,8 +24,7 @@
                                     "type": ["string", "null"]
                                 },
                                 "geo": {
-                                    "type": ["string", "null"],
-                                    "description": "geo_point expressed as string in format: lat,lon"
+                                    "type": ["string", "null"]
                                 },
                                 "type": {
                                     "type": ["string", "null"]
@@ -77,7 +73,6 @@
                     },
                     "school": {
                         "type": "object",
-                        "additionalProperties": true,
                         "properties": {
                             "location": {
                                 "type": ["string", "null"]
@@ -97,8 +92,7 @@
                         }
                     },
                     "start_date": {
-                        "format": "yyyy||yyyy-MM||yyyy-MM-dd",
-                        "type": ["date", "null"]
+                        "type": ["string", "null"]
                     }
                 }
             },
@@ -107,7 +101,6 @@
         "emails": {
             "type": "array",
             "items": {
-                "additionalProperties": true,
                 "type": "object",
                 "properties": {
                     "address": {
@@ -131,7 +124,6 @@
         "industries": {
             "type": "array",
             "items": {
-                "additionalProperties": true,
                 "type": "object",
                 "properties": {
                     "is_primary": {
@@ -149,7 +141,6 @@
                     "is_current": ["boolean", "null"],
                     "company": {
                         "type": "object",
-                        "additionalProperties": true,
                         "properties": {
                             "industry": {
                                 "type": ["string", "null"]
@@ -175,15 +166,12 @@
                         }
                     },
                     "end_date": {
-                        "format": "yyyy||yyyy-MM||yyyy-MM-dd",
-                        "type": ["date", "null"]
+                        "type": ["string", "null"]
                     },
                     "locations": {
                         "type": "array",
                         "items": {
-                            "additionalProperties": true,
                             "type": "object",
-                            "description": "If location is an unparsed string e.g. 1546 SE 55th Portland OR United States, set as object name",
                             "properties": {
                                 "continent": {
                                     "type": ["string", "null"]
@@ -192,8 +180,7 @@
                                     "type": ["string", "null"]
                                 },
                                 "geo": {
-                                    "type": ["string", "null"],
-                                    "description": "geo_point expressed as string in format: lat,lon"
+                                    "type": ["string", "null"]
                                 },
                                 "type": {
                                     "type": ["string", "null"]
@@ -223,12 +210,10 @@
                         }
                     },
                     "start_date": {
-                        "format": "yyyy||yyyy-MM||yyyy-MM-dd",
-                        "type": ["date", "null"]
+                        "type": ["string", "null"]
                     },
                     "title": {
                         "type": "object",
-                        "additionalProperties": true,
                         "properties": {
                             "functions": {
                                 "type": "array",
@@ -253,7 +238,6 @@
         },
         "interests": {
             "items": {
-                "additionalProperties": true,
                 "type": "object",
                 "properties": {
                     "name": {
@@ -266,9 +250,7 @@
         "locations": {
             "type": "array",
             "items": {
-                "additionalProperties": true,
                 "type": "object",
-                "description": "If location is an unparsed string e.g. 1546 SE 55th Portland OR United States, set as object name",
                 "properties": {
                     "continent": {
                         "type": ["string", "null"]
@@ -277,8 +259,7 @@
                         "type": ["string", "null"]
                     },
                     "geo": {
-                        "type": ["string", "null"],
-                        "description": "geo_point expressed as string in format: lat,lon"
+                        "type": ["string", "null"]
                     },
                     "type": {
                         "type": ["string", "null"]
@@ -309,7 +290,6 @@
         },
         "names": {
             "items": {
-                "additionalProperties": true,
                 "type": "object",
                 "properties": {
                     "clean": {
@@ -322,15 +302,6 @@
                         "type": ["boolean", "null"]
                     },
                     "last_name": {
-                        "type": ["string", "null"]
-                    },
-                    "first_initial": {
-                        "type": ["string", "null"]
-                    },
-                    "middle_initial": {
-                        "type": ["string", "null"]
-                    },
-                    "last_initial": {
                         "type": ["string", "null"]
                     },
                     "middle_name": {
@@ -355,7 +326,6 @@
         "phone_numbers": {
             "type": "array",
             "items": {
-                "additionalProperties": true,
                 "type": "object",
                 "properties": {
                     "E164": {
@@ -387,8 +357,6 @@
         },
         "photos": {
             "items": {
-                "additionalProperties": true,
-                "required": ["source", "url"],
                 "type": "object",
                 "properties": {
                     "source": {
@@ -404,7 +372,6 @@
         "profiles": {
             "type": "array",
             "items": {
-                "additionalProperties": true,
                 "type": "object",
                 "properties": {
                     "aliases": {
@@ -439,7 +406,6 @@
         },
         "skills": {
             "items": {
-                "additionalProperties": true,
                 "type": "object",
                 "properties": {
                     "name": {
@@ -451,7 +417,6 @@
         },
         "websites": {
             "items": {
-                "additionalProperties": true,
                 "type": "object",
                 "properties": {
                     "is_primary": {

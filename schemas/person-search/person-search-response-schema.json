@@ -5,28 +5,25 @@
         "errors": {
             "type": "array",
             "items": {
+                "type": "object",
                 "properties": {
                     "message": {
-                        "type": "string",
-                        "description": "error message"
+                        "type": "string"
                     }
                 }
             }
         },
         "message": {
-            "type": "string",
-            "description": "Status message, ex. Success"
+            "type": "string"
         },
         "status": {
-            "type": "number",
-            "description": "Status code, ex. 200"
+            "type": "number"
         },
         "hits": {
             "type": "object",
             "properties": {
                 "total": {
-                    "type": "number",
-                    "description": "total number of persons matching query"
+                    "type": "number"
                 },
                 "max_score": {
                     "type": "number"
@@ -40,8 +37,7 @@
                                 "type": "number"
                             },
                             "_source": {
-                                "type": "schemas/person/person.json",
-                                "description": "Person data structure"
+                                "type": "schemas/person/person.json"
                             }
                         }
                     }

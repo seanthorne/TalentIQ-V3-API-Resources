@@ -4,13 +4,12 @@
     "properties": {
         "likelihood": {
             "type": ["number","null"],
-            "description": "If there is a match (200 status), likelihood is a score (0-10)
-                that predicts how similar the person data in the response is to the person data requested.
-                If the request does not return a 200, likelihood is null."
+            "description": "If there is a match (200 Success), likelihood is a score (0-10) that predicts how likely the person in the request and the person in the response are the same person. If the request does not return a 200, likelihood is null."
         },
         "errors": {
             "type": "array",
             "items": {
+                "type": "object",
                 "properties": {
                     "message": {
                         "type": "string",
@@ -29,8 +28,7 @@
         },
         "data": {
             "type": ["/person.json", "null"],
-            "description": "If response is 200, a person object is returned
-                (referenced in schema/person.json file). If response code is not 200, data is null"
+            "description": "If response is 200, a person object is returned (referenced in schema/person.json file). If response code is not 200, data is null"
         }
     }
 }

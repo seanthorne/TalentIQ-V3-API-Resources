@@ -1,0 +1,137 @@
+{
+    "date_closed": null, 
+    "date_founded": "2015", 
+    "emails": [
+        {
+            "address": "sales@talentiq.co", 
+            "domain": "talentiq.co", 
+            "is_primary": true, 
+            "is_valid": true, 
+            "local": "sales", 
+            "type": "professional"
+        }, 
+        {
+            "address": "support@talentiq.co", 
+            "domain": "talentiq.co", 
+            "is_primary": true, 
+            "is_valid": true, 
+            "local": "support", 
+            "type": "professional"
+        }
+    ], 
+    "industries": [
+        {
+            "is_primary": true, 
+            "name": "computer software"
+        }
+    ], 
+    "is_active": true, 
+    "locations": [
+        {
+            "continent": "north america", 
+            "country": "united states", 
+            "geo": "37.79,-122.39", 
+            "is_primary": true, 
+            "locality": "san francisco", 
+            "name": "san francisco, california, united states", 
+            "po_box": null, 
+            "postal_code": null, 
+            "region": "california", 
+            "street_address": null, 
+            "type": "locality"
+        }, 
+        {
+            "continent": "north america", 
+            "country": "united states", 
+            "geo": "45.5236111,-122.675", 
+            "is_primary": null, 
+            "locality": "portland", 
+            "name": "portland, oregon, united states", 
+            "po_box": "1", 
+            "postal_code": "97204", 
+            "region": "oregon", 
+            "street_address": "519 sw 3rd ave", 
+            "type": "locality"
+        }
+    ], 
+    "names": [
+        {
+            "clean": "talentiqtechnologies", 
+            "is_primary": true, 
+            "name": "talentiq technologies"
+        }, 
+        {
+            "clean": "talentiq", 
+            "is_primary": false, 
+            "name": "talentiq inc."
+        }, 
+        {
+            "clean": "talentiq", 
+            "is_primary": false, 
+            "name": "talentiq"
+        }
+    ], 
+    "phone_numbers": [
+        {
+            "E164": "+19716784935", 
+            "area_code": "971", 
+            "country_code": "1", 
+            "extension": "1", 
+            "is_active": null, 
+            "is_valid": true, 
+            "national_number": "9716784935", 
+            "number": "(971) 678-4935 ext. 1"
+        }
+    ], 
+    "profiles": [
+        {
+            "aliases": [
+                "http://www.linkedin.com/company/6404208"
+            ], 
+            "clean": "linkedin.com/company/talentiq", 
+            "ids": [
+                "6404208"
+            ], 
+            "network": "linkedin", 
+            "url": "http://www.linkedin.com/company/talentiq", 
+            "username": "company/talentiq"
+        }
+    ], 
+    "size": [
+        {
+            "date": "2016", 
+            "range": {
+                "high": 50, 
+                "low": 11
+            }, 
+            "text": "11-50"
+        }
+    ], 
+    "summaries": [
+        {
+            "text": "talentiq's enrichment, normalization, and deduplication apis enable enterprises to make better use of the data they already have."
+        }
+    ], 
+    "tags": [
+        {
+            "name": "human resources"
+        },
+        {
+            "name": "data"
+        },
+        {
+            "name": "data analytics"
+        },
+        {
+            "name": "people intelligence"
+        }
+    ], 
+    "websites": [
+        {
+            "domain": "talentiq.co", 
+            "is_primary": true, 
+            "url": "http://www.talentiq.co",
+            "type": null
+        }
+    ]
+}
