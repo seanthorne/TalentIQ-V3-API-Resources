@@ -197,14 +197,14 @@
                         {
                             "continent": "north america", 
                             "country": "united states", 
-                            "geo": "37.89,-122.33", 
+                            "geo": "37.780697,-122.394221", 
                             "is_primary": null, 
-                            "locality": "albany", 
-                            "name": "albany, california, united states", 
+                            "locality": "san francisco", 
+                            "name": "san francisco, california, united states", 
                             "po_box": null, 
-                            "postal_code": "94706", 
+                            "postal_code": "94107", 
                             "region": "california", 
-                            "street_address": "730 pomona ave", 
+                            "street_address": "599 3rd Street", 
                             "type": "locality"
                         }, 
                         {
@@ -249,12 +249,12 @@
                     ], 
                     "phone_numbers": [
                         {
-                            "E164": "+14155688415", 
+                            "E164": "+14155688414", 
                             "area_code": "415", 
                             "country_code": "1", 
                             "extension": "null", 
-                            "national_number": "4155688415", 
-                            "number": "+1 (415) 568-8415", 
+                            "national_number": "4155688414", 
+                            "number": "+1 (415) 568-8414", 
                             "type": "personal"
                         }
                     ], 
